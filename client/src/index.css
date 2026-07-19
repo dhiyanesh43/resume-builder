@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Light surfaces */
+  --color-surface: #fafafc;
+  --color-card: #ffffff;
+  --color-border: #e6e7ee;
+
+  /* Text */
+  --color-ink: #14141f;
+  --color-ink-soft: #5b5d70;
+  --color-ink-faint: #9294a6;
+
+  /* Brand */
+  --color-primary: #3730a3;      /* deep indigo */
+  --color-primary-hover: #2e2a86;
+  --color-navy: #0f1631;
+  --color-accent: #10b981;       /* emerald */
+  --color-accent-hover: #0d9668;
+
+  /* Status */
+  --color-success: #16a34a;
+  --color-danger: #dc2626;
+
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 16px;
+}
+
+/* Dark mode surface overrides */
+.dark {
+  --color-surface: #0b0c14;
+  --color-card: #131421;
+  --color-border: #23243a;
+  --color-ink: #f4f4f8;
+  --color-ink-soft: #b3b4c6;
+  --color-ink-faint: #74758c;
+}
+
+* {
+  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resume-preview,
+  #resume-preview * {
+    visibility: visible;
+  }
+  #resume-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+}
