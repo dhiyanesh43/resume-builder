@@ -1,0 +1,14 @@
+{
+  "name": "resume-builder",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspace=client",
+    "postinstall": "npm run prisma:generate --workspace=server"
+  }
+}
