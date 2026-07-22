@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import { prisma } from '../../config/prisma'
 import { signAccessToken } from '../../config/jwt'
 
